@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENUNE - Licenciaturas en Educación</title>
+    <style>
+        /* Reseteo básico y fuentes */
+        :root {
+            --verde-oscuro: #1A472A;
+            --guinda-oscuro: #6A0F2A;
+            --beige-claro: #FAF0E6;
+            --gris-texto: #333333;
+            --blanco: #FFFFFF;
+            --dorado-acento: #B08D57;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--gris-texto);
+            background-color: var(--blanco);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
+            color: var(--verde-oscuro);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Navegación */
+        .navbar {
+            background-color: var(--verde-oscuro);
+            color: var(--blanco);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            padding: 0 20px; /* Override container padding for navbar */
+        }
+
+        .navbar-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .navbar-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            
+        }
+
+        .navbar-menu li {
+            margin-left: 25px;
+        }
+
+        .navbar-menu a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--dorado-acento);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/1A472A/FFF?text=Imagen+BENUNE') no-repeat center center/cover;
+            color: var(--blanco);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--blanco);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--dorado-acento);
+            color: var(--blanco);
+            border: 2px solid var(--dorado-acento);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--dorado-acento);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--guinda-oscuro);
+            color: var(--blanco);
+             border: 2px solid var(--guinda-oscuro);
+        }
+         .btn-secondary:hover {
+            background-color: transparent;
+            color: var(--guinda-oscuro);
+            transform: translateY(-2px);
+        }
+
+
+        /* Secciones Generales */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--guinda-oscuro);
+        }
+
+        /* Oferta Educativa */
+        .oferta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .oferta-card {
+            background-color: var(--beige-claro);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .oferta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .oferta-card h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .oferta-card p {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+
+        /* Ventajas */
+        .ventajas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .ventaja-item {
+            padding: 20px;
+        }
+        .ventaja-item .icon { /* Placeholder para íconos */
+            font-size: 3em;
+            color: var(--guinda-oscuro);
+            margin-bottom: 15px;
+        }
+        .ventaja-item h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Instalaciones */
+        .instalaciones-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .instalaciones-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--guinda-oscuro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-section h2 {
+            color: var(--blanco);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        /* Contacto */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contacto-info p { margin-bottom: 10px; }
+        .contacto-info strong { color: var(--verde-oscuro); }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form button {
+             background-color: var(--verde-oscuro);
+             color: var(--blanco);
+             border: 2px solid var(--verde-oscuro);
+        }
+        .contact-form button:hover {
+            background-color: transparent;
+            color: var(--verde-oscuro);
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: var(--verde-oscuro);
+            color: var(--beige-claro);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: var(--dorado-acento);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1em; }
+            .navbar .container { flex-direction: column; }
+            .navbar-menu ul { flex-direction: column; text-align: center; }
+            .navbar-menu li { margin: 10px 0; }
+            .oferta-grid { grid-template-columns: 1fr; }
+            .ventajas-grid { grid-template-columns: 1fr; }
+            .contacto-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2em; }
+        }
+
+        /* Add Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;700&display=swap');
+
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <img style="vertical-align:top; width: 90px; height: 90px;" src="./images/LogoBENUNE_WhiteCircleBG.png" alt="Logo BENUNE">
+            </div>
+            <div>
+                <a href="#" class="navbar-logo">Benemérita Escuela Normal Urbana Nocturna del Estado</a>
+                <br><a href="#" class="navbar-logo" style="font-size:large; font-weight: normal;">Ing. José G. Valenzuela
+            </div>
+            <div style="margin: 70px;"></div>
+            <div class="navbar-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#oferta">Oferta Educativa</a></li>
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Forjando el Futuro de la Educación Inclusiva</h1>
+            <p>Licenciaturas en Inclusión Educativa y Educación Especial. Turnos Matutino y Vespertino en Mexicali, B.C.</p>
+            <a href="#oferta" class="btn btn-primary">Conoce Nuestra Oferta</a>
+        </div>
+    </section>
+
+    <!-- Oferta Educativa -->
+    <section id="oferta" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Licenciaturas</h2>
+            <div class="oferta-grid">
+                <div class="oferta-card">
+                    <h3>Licenciatura en Inclusión Educativa</h3>
+                    <p>Plan 2018. Fórmate como un profesional capaz de diseñar y aplicar estrategias para la atención a la diversidad en los contextos educativos.</p>
+                    <a href="#" class="btn btn-secondary">Más Información</a>
+                </div>
+                <div class="oferta-card">
+                    <h3>Licenciatura en Educación Especial</h3>
+                    <p>Plan 2022. Especialízate en la intervención educativa de alumnos con necesidades específicas, promoviendo su desarrollo integral y participación plena.</p>
+                    <a href="#" class="btn btn-secondary">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas / Por Qué BENUNE -->
+    <section id="ventajas" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Elegir BENUNE?</h2>
+            <div class="ventajas-grid">
+                <div class="ventaja-item">
+                    <div class="icon">⭐</div> <!-- Placeholder para ícono real -->
+                    <h3>Calidad y Tradición</h3>
+                    <p>Somos una Benemérita Escuela Normal con un legado en la formación de docentes de excelencia.</p>
+                </div>
+                <div class="ventaja-item">
+                    <div class="icon">⏰</div> <!-- Placeholder para ícono real -->
+                    <h3>Horarios Flexibles</h3>
+                    <p>Turno matutino de 7:00 a 14:00 hrs y vespertino de 15:00 a 22:00 hrs, adaptados a tus necesidades.</p>
+                </div>
+                <div class="ventaja-item">
+                    <div class="icon">🏢</div> <!-- Placeholder para ícono real -->
+                    <h3>Instalaciones Modernas</h3>
+                    <p>Aulas climatizadas, biblioteca, centro de cómputo, áreas deportivas y más para tu desarrollo integral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instalaciones -->
+    <section id="instalaciones" class="section">
+        <div class="container">
+            <h2 class="section-title">Conoce Nuestras Instalaciones</h2>
+            <div class="instalaciones-gallery">
+                <img src="https://placehold.co/400x300/1A472A/FFF?text=Aula+Climatizada" alt="Aula Climatizada">
+                <img src="https://placehold.co/400x300/6A0F2A/FFF?text=Biblioteca" alt="Biblioteca">
+                <img src="https://placehold.co/400x300/B08D57/333?text=Centro+Cómputo" alt="Centro de Cómputo">
+                <img src="https://placehold.co/400x300/1A472A/FFF?text=Área+Deportiva" alt="Área Deportiva">
+                <img src="https://placehold.co/400x300/6A0F2A/FFF?text=Comedor" alt="Comedor">
+                <img src="https://placehold.co/400x300/B08D57/333?text=Estacionamiento" alt="Amplio Estacionamiento">
+            </div>
+            <p style="text-align:center; margin-top:20px;">Contamos con: Aulas didácticas climatizadas, biblioteca, centro de cómputo, área de comedor, aula de usos múltiples, área de posgrado, departamento de investigación, oficinas administrativas, área de cubículos docentes, espacios recreativos y deportivos, y amplio estacionamiento.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Transformar el Futuro Educativo?</h2>
+            <p>Únete a la Benemérita Escuela Normal Urbana Nocturna del Estado "Ing. José G. Valenzuela".</p>
+            <a href="#contacto" class="btn btn-primary">Solicita Información</a>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <h3>Benemérita Escuela Normal Urbana Nocturna del Estado "Ing. José G. Valenzuela"</h3>
+                    <p><strong>Dirección:</strong> Calle de la Normal S/N, Col. Maestros Estatales, C.P. 21280, Mexicali, Baja California.</p>
+                    <p><strong>Teléfono:</strong> (686) XXX-XXXX</p>
+                    <p><strong>Email:</strong> contacto@benune.edu.mx (ejemplo)</p>
+                    <p><strong>Horarios de Atención:</strong></p>
+                    <ul>
+                        <li>Turno Matutino: 7:00 a 14:00 horas</li>
+                        <li>Turno Vespertino: 15:00 a 22:00 horas</li>
+                    </ul>
+                    <!-- Aquí podrías embeber un mapa de Google Maps -->
+                     <div style="margin-top:20px; width:100%; height:300px; background-color:#e0e0e0; display:flex; align-items:center; justify-content:center; border-radius:5px;">
+                        <p style="color:#555;">Espacio para Google Maps</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Benemérita Escuela Normal Urbana Nocturna del Estado "Ing. José G. Valenzuela". Todos los derechos reservados.</p>
+            <p>Diseñado con <a href="#">inspiración</a> y <a href="#">pasión</a>.</p>
+            <!-- Aquí podrían ir iconos de redes sociales -->
+        </div>
+    </footer>
+
+    <!-- Para íconos podrías usar FontAwesome, SVG o imágenes. Aquí uso texto como placeholder -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+</body>
+</html>
