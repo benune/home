@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciatura en Educación Especial - BENUNE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/css/solid.css" rel="stylesheet" />
+    <script>
+        // Configuración de Tailwind CSS para colores personalizados y fuentes
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde-oscuro': '#1A472A',
+                        'guinda-oscuro': '#6A0F2A',
+                        'beige-claro': '#FAF0E6',
+                        'gris-texto': '#333333',
+                        'blanco': '#FFFFFF',
+                        'dorado-acento': '#B08D57',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Inter es la fuente por defecto de Tailwind, la mantengo.
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-open-sans m-0 p-0 leading-relaxed text-gris-texto bg-blanco">
+
+    <nav class="bg-verde-oscuro text-blanco py-4 px-0 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto w-11/12 max-w-8xl flex flex-col md:flex-row justify-evenly items-center px-5">
+            <div class="flex flex-col md:flex-row items-center md:space-x-4">
+                <img class="align-top w-24 h-24 rounded-full object-cover" src="./images/LogoBENUNE_WhiteCircleBG.png" alt="Logo BENUNE">
+                <div class="text-center md:text-left mt-2 md:mt-0">
+                    <a href="#" class="text-2xl font-bold text-blanco no-underline block">Benemérita Escuela Normal Urbana Nocturna del Estado</a>
+                    <a href="#" class="text-lg font-normal text-blanco no-underline block">Ing. José G. Valenzuela</a>
+                </div>
+            </div>
+            <div class="md:ml-auto md:mr-16 mt-4 md:mt-0"></div> <div class="navbar-menu mt-4 md:mt-0">
+                <ul class="list-none p-0 m-0 flex flex-col md:flex-row text-center">
+                    <li class="md:ml-6 my-2 md:my-0"><a href="./index.html" class="text-blanco no-underline font-medium transition-colors duration-300 hover:text-dorado-acento">Inicio</a></li>
+                    <li class="md:ml-6 my-2 md:my-0"><a href="#instalaciones" class="text-blanco no-underline font-medium transition-colors duration-300 hover:text-dorado-acento">Lic. en Inclusión Educativa</a></li>
+                    <li class="md:ml-6 my-2 md:my-0"><a href="#contacto" class="text-blanco no-underline font-medium transition-colors duration-300 hover:text-dorado-acento">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero bg-cover bg-center bg-no-repeat text-blanco h-[80vh] flex items-center justify-center text-center px-5"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('./images/aulaInclusiva03.png');">
+        <div class="hero-content max-w-3xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl mb-5 text-blanco leading-tight font-montserrat font-bold">Licenciatura en Educación Especial</h1>
+            <p class="text-lg md:text-xl mb-8"><b>Plan 2022</b> <br>Especialízate en la intervención educativa de alumnos con necesidades específicas, promoviendo su desarrollo integral y participación plena.</p>
+            <a href="#oferta" class="inline-block py-3 px-6 no-underline rounded font-bold transition duration-300 ease-in-out
+                bg-dorado-acento text-blanco border-2 border-dorado-acento hover:bg-transparent hover:text-dorado-acento hover:-translate-y-0.5 transform">Conoce el Plan de Estudios</a>
+        </div>
+    </section>
+
+    <section id="oferta" class="section py-16">
+        <div class="container mx-auto w-11/12 max-w-7xl px-5">
+            <h2 class="section-title text-center text-3xl md:text-4xl lg:text-5xl mb-10 text-guinda-oscuro font-montserrat">Nuestras Licenciaturas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="oferta-card bg-beige-claro p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <h3 class="text-2xl md:text-3xl text-verde-oscuro mb-4 font-montserrat">Licenciatura en Inclusión Educativa</h3>
+                    <p class="mb-5 text-base">Plan 2018. Fórmate como un profesional capaz de diseñar y aplicar estrategias para la atención a la diversidad en los contextos educativos.</p>
+                    <a href="#" class="inline-block py-3 px-6 no-underline rounded font-bold transition duration-300 ease-in-out
+                        bg-guinda-oscuro text-blanco border-2 border-guinda-oscuro hover:bg-transparent hover:text-guinda-oscuro hover:-translate-y-0.5 transform">Más Información</a>
+                </div>
+                <div class="oferta-card bg-beige-claro p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <h3 class="text-2xl md:text-3xl text-verde-oscuro mb-4 font-montserrat">Licenciatura en Educación Especial</h3>
+                    <p class="mb-5 text-base">Plan 2022. Especialízate en la intervención educativa de alumnos con necesidades específicas, promoviendo su desarrollo integral y participación plena.</p>
+                    <a href="#" class="inline-block py-3 px-6 no-underline rounded font-bold transition duration-300 ease-in-out
+                        bg-guinda-oscuro text-blanco border-2 border-guinda-oscuro hover:bg-transparent hover:text-guinda-oscuro hover:-translate-y-0.5 transform">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ventajas" class="section py-16 bg-[#f7f7f7]">
+        <div class="container mx-auto w-11/12 max-w-7xl px-5">
+            <h2 class="section-title text-center text-3xl md:text-4xl lg:text-5xl mb-10 text-guinda-oscuro font-montserrat">¿Por qué elegir BENUNE?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="ventaja-item p-5">
+                    <div class="ventaja-item p-5"><i class="fa-solid fa-star fa-2xl"></i></div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat">Calidad y Tradición</h3>
+                    <p>Somos una Benemérita Escuela Normal con un legado en la formación de docentes de excelencia.</p>
+                </div>
+                <div class="ventaja-item p-5">
+                    <div class="ventaja-item p-5"><i class="fa-solid fa-clock fa-2xl"></i></div> <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat">Horarios Flexibles</h3>
+                    <p>Turno matutino de 7:00 a 14:00 hrs y vespertino de 15:00 a 22:00 hrs, adaptados a tus necesidades.</p>
+                </div>
+                <div class="ventaja-item p-5">
+                    <div class="ventaja-item p-5"><i class="fa-solid fa-school-flag fa-2xl"></i></div> <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat">Instalaciones Modernas</h3>
+                    <p>Aulas climatizadas, biblioteca, centro de cómputo, áreas deportivas y más para tu desarrollo integral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="section py-10">
+        <div class="container mx-auto w-11/12 max-w-7xl px-5">
+            <h2 class="section-title text-center text-3xl md:text-4xl lg:text-5xl mb-10 text-guinda-oscuro font-montserrat">¡Conócenos!</h2>
+            <iframe class="container mx-auto justify-center" height="512" src="https://www.youtube.com/embed/wSC98Yl8sIU"></iframe>
+        </div>
+    </section>
+
+    <section id="instalaciones" class="section py-16 bg-[#f7f7f7]">
+        <div class="container mx-auto w-11/12 max-w-7xl px-5">
+            <h2 class="section-title text-center text-3xl md:text-4xl lg:text-5xl mb-10 text-guinda-oscuro font-montserrat">Nuestras Instalaciones</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Aulas climatizadas</h3>
+                    <img src="./images/edificio.png" alt="Aula Climatizada" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Biblioteca equipada</h3>
+                    <img src="https://placehold.co/400x300/6A0F2A/FFF?text=Biblioteca" alt="Biblioteca" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Centro de Cómputo</h3>
+                    <img src="./images/computo.png" alt="Centro de Cómputo" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Área deportiva</h3>
+                    <img src="https://placehold.co/400x300/1A472A/FFF?text=Área+Deportiva" alt="Área Deportiva" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Comedor agradable</h3>
+                    <img src="https://placehold.co/400x300/6A0F2A/FFF?text=Comedor" alt="Comedor" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl text-verde-oscuro mb-3 font-montserrat text-center">Estacionamiento amplio</h3>
+                    <img src="https://placehold.co/400x300/B08D57/333?text=Estacionamiento" alt="Amplio Estacionamiento" class="w-full h-52 object-cover rounded shadow-md">
+                </div>
+            </div>
+            <p class="text-center mt-5">Contamos con: Aulas didácticas climatizadas, biblioteca, centro de cómputo, área de comedor, aula de usos múltiples, área de posgrado, departamento de investigación, oficinas administrativas, área de cubículos docentes, espacios recreativos y deportivos, y amplio estacionamiento.</p>
+        </div>
+    </section>
+
+    <section id="solicita-informacion" class="cta-section bg-guinda-oscuro text-blanco text-center py-16 px-5">
+        <div class="container mx-auto w-11/12 max-w-7xl">
+            <h2 class="text-blanco text-3xl md:text-5xl mb-5 font-montserrat">¿Listo para Transformar el Futuro Educativo?</h2>
+            <p class="mb-8 text-lg">Únete a la <br>Benemérita Escuela Normal Urbana Nocturna del Estado <br>"Ing. José G. Valenzuela".</p>
+            <a href="#contacto" class="inline-block py-3 px-6 no-underline rounded font-bold transition duration-300 ease-in-out
+                bg-dorado-acento text-blanco border-2 border-dorado-acento hover:bg-transparent hover:text-dorado-acento hover:-translate-y-0.5 transform">Solicita Información</a>
+        </div>
+    </section>
+
+    <section id="contacto" class="section py-16">
+        <div class="container mx-auto w-11/12 max-w-7xl px-5">
+            <h2 class="section-title text-center text-3xl md:text-4xl lg:text-5xl mb-10 text-guinda-oscuro font-montserrat">Contáctanos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div class="contacto-info">
+                    <h3 class="text-2xl md:text-3xl text-verde-oscuro mb-1 font-montserrat">Benemérita Escuela Normal Urbana Nocturna del Estado</h3>
+                    <h4 class="text-xl md:text-2xl text-verde-oscuro mb-4 font-montserrat">"Ing. José G. Valenzuela"</h4>
+                    <p class="mb-0"><strong>Dirección:</strong> Av. Juan Escutia S/N esquina con Calle Río San Lorenzo,</p>
+                    <p class="mb-2 pl-20">Col. Pro-Hogar, C.P. 21200, Mexicali, Baja California.</p>
+                    <p class="mb-2"><strong>Teléfono:</strong> (686) 566-1495</p>
+                    <p class="mb-2"><strong>Correo-e:</strong><a href="mailto:normalbenune@gmail.com?subject=Solicito%20Información"> normalbenune@gmail.com</a></p>
+                    <p class="mb-2"><strong>Horarios de Atención:</strong></p>
+                    <ul class="list-disc pl-10">
+                        <li>Turno Matutino: 7:00 a 14:00 horas</li>
+                        <li>Turno Vespertino: 15:00 a 22:00 horas</li>
+                    </ul>
+                    <div class="mt-5 w-full h-72 bg-gray-200 flex items-center justify-center rounded-md">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.390863506831!2d-115.43398102467012!3d32.64904139051583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d77053cab98c2d%3A0xa6469a91fb47b1b7!2sBenem%C3%A9rita%20Escuela%20Normal%20Urbana%20Nocturna%20del%20Estado!5e0!3m2!1ses-419!2smx!4v1748988300081!5m2!1ses-419!2smx" width="570" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <h3 class="text-2xl md:text-3xl text-verde-oscuro mb-4 font-montserrat">Envíanos un Mensaje</h3>
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required
+                        class="w-full p-3 mb-4 border border-gray-300 rounded-md box-border focus:outline-none focus:ring-2 focus:ring-verde-oscuro">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required
+                        class="w-full p-3 mb-4 border border-gray-300 rounded-md box-border focus:outline-none focus:ring-2 focus:ring-verde-oscuro">
+                    <textarea name="mensaje" placeholder="Tu Mensaje" required
+                        class="w-full p-3 mb-4 border border-gray-300 rounded-md box-border resize-y min-h-[120px] focus:outline-none focus:ring-2 focus:ring-verde-oscuro"></textarea>
+                    <button type="submit" class="inline-block py-3 px-6 no-underline rounded font-bold transition duration-300 ease-in-out
+                        bg-verde-oscuro text-blanco border-2 border-verde-oscuro hover:bg-transparent hover:text-verde-oscuro hover:-translate-y-0.5 transform">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-verde-oscuro text-beige-claro text-center py-8 px-5">
+        <div class="container mx-auto w-11/12 max-w-7xl">
+            <p class="m-0 text-sm">© 2025 Benemérita Escuela Normal Urbana Nocturna del Estado "Ing. José G. Valenzuela". Todos los derechos reservados.</p>
+            <p class="m-0 text-sm">Diseño y mantenimineto <a href="#" class="text-dorado-acento no-underline hover:underline">Área de Tecnología BENUNE</a></p>
+            </div>
+    </footer>
+
+</body>
+</html>
